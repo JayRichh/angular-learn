@@ -1,0 +1,6 @@
+<h2>Signals</h2>
+<p>Count: {{ count() }}</p>
+<!-- TODO: once computed() values exist, show doubled and parity here -->
+<label>Step <input type="number" [value]="step()" (input)="step.set(+$any($event.target).value)" /></label>
+<button (click)="increment()">+{{ step() }}</button>
+<button (click)="reset()">Reset</button>
